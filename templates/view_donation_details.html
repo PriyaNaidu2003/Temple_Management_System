@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Donation Details</title>
+    <link rel="stylesheet" type="text/css" href="/static/viewt.css">
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <h1>Donation Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>VisitorID</th>
+                    <th>TempleID</th>
+                    <th>DonationAmount</th>
+                    <th>DonationDate</th>
+                    <th>PaymentMethod</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for donation in donation_details %}
+                <tr>
+                    <td>{{ donation[0] }}</td>
+                    <td>{{ donation[1] }}</td>
+                    <td>{{ donation[2] }}</td>
+                    <td>{{ donation[3] }}</td>
+                    <td>{{ donation[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

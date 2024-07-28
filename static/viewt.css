@@ -1,0 +1,38 @@
+body {
+    background-image: url('../static/images/abb.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    height: 80vh; /* You can change the font-family if needed */
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px; /* Adjust the max-width as per your requirement */
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #f2f2f2; /* Apply the same background color */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}

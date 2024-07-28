@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Attributes</title>
+</head>
+<body>
+    <h1>Select Attributes</h1>
+    <form action="/display_columns" method="post">
+        <label for="table">Select Table:</label>
+        <select name="table" id="table">
+            {% for table, attributes in tables.items() %}
+            <option value="{{ table }}">{{ table }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label>Attributes:</label>
+        {% for table, attributes in tables.items() %}
+        <fieldset>
+            <legend>{{ table }}</legend>
+            {% for attribute in attributes %}
+            <input type="checkbox" name="attributes" value="{{ attribute }}">{{ attribute }}<br>
+            {% endfor %}
+        </fieldset>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

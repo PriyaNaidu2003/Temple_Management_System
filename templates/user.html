@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Functionalities</title>
+    <link rel="stylesheet" href="/static/us.css"> <!-- Link to your CSS file -->
+    <style>
+        /* CSS styling for the logout button */
+        .logout-button {
+            padding: 10px 20px; /* Adjust padding as needed */
+            font-size: 16px;
+            width:80px; /* Adjust font size as needed */
+        }
+    </style>
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button class="logout-button" type="submit">Logout</button>
+    </form>
+    <h1>Welcome, {{ session.username }}!</h1>
+    <h2>User Functionalities</h2>
+    <div class="button-group">
+        <div class="button-column">
+            <button><a href="{{ url_for('view_temple_details') }}">View Temple Details</a></button>
+            <button><a href="{{ url_for('view_donation_details') }}">View Donation Details</a></button>
+            <button><a href="{{ url_for('view_visits') }}">View Visits</a></button>
+
+        </div>
+        <div class="button-column">
+            <button><a href="{{ url_for('visitor_most_visits_each_temple') }}">View Visitor with Most Visits to Each Temple</a></button>
+            <button><a href="{{ url_for('view_visitors_based_on_purpose') }}">View Visitors Based on Purpose</a></button>
+            <button><a href="{{ url_for('temple_most_visits') }}">View Temple with Most Visits</a></button>
+        </div>
+        <div class="button-column">
+            <button><a href="{{ url_for('view_Visitor_details') }}">View Visitor Details</a></button>
+            <button><a href="{{ url_for('view_visitors_based_on_gender') }}">View Visitors Based on Gender</a></button>
+            <button><a href="{{ url_for('highest_donations') }}">View Visitors with Highest Donations</a></button>
+        </div>
+    </div>
+</body>
+</html>

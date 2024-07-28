@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple with Most Visits</title>
+    <link rel="stylesheet" type="text/css" href="/static/viewt.css">
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <h1>Temple with Most Visits</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Temple ID</th>
+                    <th>Temple Name</th>
+                    <th>Location</th>
+                    <th>Year Built</th>
+                    <th>Architectural Style</th>
+                    <th>Visit Count</th>
+                    <th>Visit Rank</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for temple_detail in temple_details %}
+                <tr>
+                    <td>{{ temple_detail[0] }}</td>
+                    <td>{{ temple_detail[1] }}</td>
+                    <td>{{ temple_detail[2] }}</td>
+                    <td>{{ temple_detail[3] }}</td>
+                    <td>{{ temple_detail[4] }}</td>
+                    <td>{{ temple_detail[5] }}</td> <!-- Visit Count -->
+                    <td>{{ temple_detail[6] }}</td> <!-- Visit Rank -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

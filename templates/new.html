@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Visitor Details</title>
+    <link rel="stylesheet" href="/static/viewt.css">
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <h1>Visitor Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>VisitorID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for Visitor in Visitor_details %}
+                <tr>
+                    <td>{{ Visitor[0] }}</td>
+                    <td>{{ Visitor[1] }}</td>
+                    <td>{{ Visitor[2] }}</td>
+                    <td>{{ Visitor[3] }}</td>
+                    <td>{{ Visitor[4] }}</td>
+                    <td>{{ Visitor[5] }}</td>
+                    <td>{{ Visitor[6] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

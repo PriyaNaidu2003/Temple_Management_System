@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Table</title>
+    <link rel="stylesheet" type="text/css" href="/static/rain.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <form action="/select_tablelah" method="post">
+            <h1>Select a Table</h1>
+            <div class="button-group">
+                <button type="submit" name="table_name" value="attendence">attendence</button>
+                <button type="submit" name="table_name" value="deduction">deduction</button>
+                <button type="submit" name="table_name" value="department">department</button>
+                <button type="submit" name="table_name" value="employee">employee</button>
+                <button type="submit" name="table_name" value="payroll">payroll</button>
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>

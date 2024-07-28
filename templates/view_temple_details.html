@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Temple Details</title>
+    <link rel="stylesheet" href="/static/viewt.css">
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <h1>Temple Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>TempleID</th>
+                    <th>TempleName</th>
+                    <th>Location</th>
+                    <th>YearBuilt</th>
+                    <th>ArchitecturalStyle</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for temple in temple_details %}
+                <tr>
+                    <td>{{ temple[0] }}</td>
+                    <td>{{ temple[1] }}</td>
+                    <td>{{ temple[2] }}</td>
+                    <td>{{ temple[3] }}</td>
+                    <td>{{ temple[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

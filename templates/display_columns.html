@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Columns</title>
+</head>
+<body>
+    <h1>Display Columns</h1>
+    <h2>Table: {{ table_name }}</h2>
+    <form action="/insert_values" method="post">
+        <input type="hidden" name="table" value="{{ table_name }}">
+        <input type="hidden" name="attributes" value="{{ attributes }}">
+        <table border="1">
+            <tr>
+                {% for column in columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for attribute in attributes %}
+                <td><input type="text" name="{{ attribute }}"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Insert Values">
+    </form>
+</body>
+</html>
+    

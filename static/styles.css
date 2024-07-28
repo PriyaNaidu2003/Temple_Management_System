@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../static/images/op2.jpg'); /* Adjust the path to your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(0, 0, 0); /* Adjust text color as needed */
+    font-size: 36px; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Increase margin to move the heading up vertically */
+}
+
+p {
+    color: black; /* Adjust text color as needed */
+}
+
+form {
+    display: flex;
+    flex-direction: row; /* Change to row to align buttons horizontally */
+}
+
+button {
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background-color:cornsilk; /* Button background color */
+    color:black; /* Button text color */
+}
+
+button:hover {
+    background-color: #555; /* Button hover background color */
+}

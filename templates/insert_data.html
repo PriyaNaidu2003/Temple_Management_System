@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Data Form</title>
+</head>
+<body>
+    <h1>Insert Data</h1>
+    <form method="POST" action="/home">
+        <h2>Select Table Name:</h2>
+        <select name="table_name" id="table_name">
+            {% for table in tables %}
+            <option value="{{ table }}">{{ table }}</option>
+            {% endfor %}
+        </select>
+
+        <div id="input_fields"></div>
+        
+        <button type="submit">Insert Data</button>
+    </form>
+
+    <script>
+        // Add event listener to the table_name select
+        document.getElementById('table_name').addEventListener('change', function() {
+            var selectedTable = this.value;
+            var inputFieldsDiv = document.getElementById('input_fields');
+    
+            // Clear previous input fields
+            inputFieldsDiv.innerHTML = "";
+    
+            // Render input fields based on the selected table
+            {% for attribute in table_attributes['Temple'] %}
+                var label = document.createElement("label");
+                label.textContent = "{{ attribute }}:";
+                var input = document.createElement("input");
+                input.type = "text";
+                input.id = "{{ attribute }}";
+                input.name = "{{ attribute }}";
+                inputFieldsDiv.appendChild(label);
+                inputFieldsDiv.appendChild(input);
+            {% endfor %}
+        });
+    </script>
+    
+</body>
+</html>

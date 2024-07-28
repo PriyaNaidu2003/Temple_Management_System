@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Functionalities</title>
+    <link rel="stylesheet" type="text/css" href="/static/sam.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <h1>Welcome, {{ session.username }}!</h1>
+        <h2>Admin Functionalities:</h2>
+        <ul>
+            {% set view_details_url = url_for('view_details') %}
+            {% set select_table_url = url_for('select_table') %}
+            {% set delete_row_url = url_for('delete_row') %}
+            <li><button class="button" onclick="location.href='{{ view_details_url }}'">View Details</button></li>
+            <li><button class="button" onclick="location.href='{{ select_table_url }}'">Insert Data</button></li>
+            <li><button class="button" onclick="location.href='{{ delete_row_url }}'">Delete Data</button></li>
+        </ul>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Visits</title>
+    <link rel="stylesheet" type="text/css" href="/static/viewt.css">
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <h1>Visit Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>VisitID</th>
+                    <th>VisitorID</th>
+                    <th>TempleID</th>
+                    <th>VisitDate</th>
+                    <th>VisitTime</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for visit in visit_details %}
+                <tr>
+                    <td>{{ visit[0] }}</td>
+                    <td>{{ visit[1] }}</td>
+                    <td>{{ visit[2] }}</td>
+                    <td>{{ visit[3] }}</td>
+                    <td>{{ visit[4] }}</td>
+                    <td>{{ visit[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

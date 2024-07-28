@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="/static/priya.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container"> <!-- Add this container div -->
+        <h2>Register</h2>
+        {% if error_message %}
+        <div>{{ error_message }}</div>
+        {% endif %}
+        <form method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+    </div> <!-- Close the container div -->
+</body>
+</html>

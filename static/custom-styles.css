@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../static/images/823615-shivaadiyogi-wallpaper-hd-free-download-for-mobile-and-desktop-shiva-wallpaper-adiyogi-shiva-statue-wallpaper-lord-shiva-hd-wallpaper.jpg'); /* Adjust the path to your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(0, 0, 0); /* Adjust text color as needed */
+    font-size: 50px; /* Adjust font size as needed */
+    margin-bottom: 80px;
+    margin-left: 60px; /* Increase margin to move the heading up vertically */
+}
+
+p {
+    color: black; /* Adjust text color as needed */
+}
+
+form {
+    display: flex;
+    flex-direction: row; /* Change to row to align buttons horizontally */
+}
+.buttons {
+    margin-bottom: 380px; /* Decrease margin-top to move buttons vertically up */
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: brown; /* Change background color for buttons */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 100px;
+    margin-left: 100px; 
+    align-items: center;
+   /* Add some margin between buttons */
+
+}
+
+.button:hover {
+    background-color: #8B4513; /* Change hover background color */
+}
+
+.login-button,
+.register-button {
+    background-color: brown; /* Change background color for both buttons */
+    
+}

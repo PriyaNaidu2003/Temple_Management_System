@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to User Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/custom-styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to User Page</h1>
+        <div class="buttons">
+            <a href="{{ url_for('login') }}" class="button login-button">Login</a>
+            <a href="{{ url_for('register') }}" class="button register-button">Register</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Details Form</title>
+    <link rel="stylesheet" type="text/css" href="/static/bru.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container"> <!-- Add this container div -->
+        <h1>Select Table to View Details</h1>
+        <form method="POST" action="{{ url_for('view_records') }}">
+            <button type="submit" name="table_name" value="attendence">view attendence</button>
+            <button type="submit" name="table_name" value="deduction"> view deduction</button>
+            <button type="submit" name="table_name" value="department"> view department</button>
+            <button type="submit" name="table_name" value="employee"> view employee</button>
+            <button type="submit" name="table_name" value="payroll"> view payroll</button>
+        </form>
+    </div> <!-- Close the container div -->
+</body>
+</html>

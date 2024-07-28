@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Row</title>
+    <link rel="stylesheet" type="text/css" href="/static/dell.css"> <!-- Link to your CSS file -->
+    <style>
+        /* CSS styling for the logout button */
+        .logout-button {
+            padding: 10px 20px; /* Adjust padding as needed */
+            font-size: 16px;
+            width:100px; /* Adjust font size as needed */
+            margin-right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button class="logout-button" type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <h1>Delete Row</h1>
+        <form action="/delete" method="post">
+            <label for="table_name">Table Name:</label>
+            <input type="text" id="table_name" name="table_name" required><br><br>
+
+            <label for="column_name">Column Name:</label>
+            <input type="text" id="column_name" name="column_name" required><br><br>
+
+            <label for="column_value">Column Value:</label>
+            <input type="text" id="column_value" name="column_value" required><br><br>
+
+            <input type="submit" value="Delete Row">
+        </form>
+    </div>
+</body>
+</html>

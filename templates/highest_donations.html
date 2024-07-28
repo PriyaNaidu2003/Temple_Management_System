@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitors with Highest Donations</title>
+    <link rel="stylesheet" type="text/css" href="/static/viewt.css">
+</head>
+<body>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <h1>Visitors with Highest Donations</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Visitor ID</th>
+                    <th>Visitor Name</th>
+                    <th>Total Donation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for visitor_id, visitor_name, total_donation in donation_details %}
+                <tr>
+                    <td>{{ visitor_id }}</td>
+                    <td>{{ visitor_name }}</td>
+                    <td>{{ total_donation }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
